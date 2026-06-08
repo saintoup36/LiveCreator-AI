@@ -560,17 +560,27 @@ label {
     font-weight: 800 !important;
 }
 
+div[data-baseweb="input"],
 div[data-baseweb="input"] > div,
-div[data-baseweb="textarea"] > div,
-div[data-baseweb="select"] > div {
-    background-color: rgba(255,255,255,.085) !important;
-    border: 1px solid rgba(255,255,255,.16) !important;
-    border-radius: 18px !important;
-    color: white !important;
+div[data-baseweb="textarea"],
+div[data-baseweb="textarea"] > div {
+    background: #111827 !important;
+    background-color: #111827 !important;
 }
 
-div[data-baseweb="input"] input {
-    color: inherit !important;
+div[data-baseweb="input"] input,
+div[data-baseweb="textarea"] textarea,
+input,
+textarea {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #cbd5e1 !important;
+    opacity: 1 !important;
 }
 
 .stButton > button {
