@@ -50,7 +50,15 @@ if SUPABASE_AVAILABLE and SUPABASE_URL and SUPABASE_KEY:
         supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
     except Exception:
         supabase = None
-
+        
+def is_premium_user():
+    return False
+        
+if st.session_state.get("user"):
+    if is_premium_user():
+        st.success("💎 Premium Creator")
+    else:
+        st.info("🆓 Free Creator")
 
 # ============================================================
 # TRANSLATION SYSTEM — SAFE, NO MONKEY PATCHING
@@ -365,6 +373,23 @@ def thtml(html: str) -> str:
 def current_language() -> str:
     return st.session_state.get("active_app_language", "English")
 
+def is_premium_user():
+    if not supabase or not st.session_state.get("user"):
+        return False
+
+    try:
+        result = (
+            supabase.table("user_profiles")
+            .select("is_premium")
+            .eq("id", st.session_state.user.id)
+            .single()
+            .execute()
+        )
+
+        return result.data.get("is_premium", False)
+
+    except Exception:
+        return False
 
 # ============================================================
 # STATE
@@ -545,7 +570,7 @@ div[data-baseweb="select"] > div {
 }
 
 div[data-baseweb="input"] input {
-    color: black !important;
+    color: white !important;
     font-weight: 600 !important;
 }
 
@@ -944,6 +969,23 @@ with st.expander(f"🔐 {t('Account Access')}", expanded=False):
                             st.rerun()
                         except Exception as e:
                             st.error(f"Login failed: {e}")
+                        try:
+                            existing = (
+                                supabase.table("user_profiles")
+                                .select("*")
+                                .eq("id", result.user.id)
+                                .execute()
+                            )
+                            
+                            if not existing.data:
+                                supabase.table("user_profiles").insert({
+                                    "id": result.user.id,
+                                    "email": result.user.email,
+                                    "is_premium": False
+                                }).execute()
+
+                        except Exception as e:
+                            st.warning(f"Profile creation failed: {e}")
 
 
 # ============================================================
