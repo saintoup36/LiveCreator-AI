@@ -570,8 +570,7 @@ div[data-baseweb="select"] > div {
 }
 
 div[data-baseweb="input"] input {
-    color: white !important;
-    font-weight: 600 !important;
+    color: inherit !important;
 }
 
 .stButton > button {
