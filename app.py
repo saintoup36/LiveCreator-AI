@@ -877,6 +877,53 @@ def output_block(title: str, text: str, file_prefix: str):
     else:
         st.caption("PDF export available after: pip install reportlab")
 
+def get_creator_stats():
+    if not supabase or not st.session_state.get("user"):
+        return None
+
+    user_id = st.session_state.user.id
+
+    try:
+        result = (
+            supabase.table("creator_stats")
+            .select("*")
+            .eq("user_id", user_id)
+            .execute()
+        )
+
+        if result.data:
+            return result.data[0]
+
+        supabase.table("creator_stats").insert({
+            "user_id": user_id
+        }).execute()
+
+        return {
+            "live_packs_generated": 0,
+            "hooks_generated": 0,
+            "captions_generated": 0,
+            "last_activity": None,
+            "created_at": None,
+        }
+
+    except Exception:
+        return None
+
+
+def update_creator_stat(stat_name):
+    if not supabase or not st.session_state.get("user"):
+        return
+
+    stats = get_creator_stats()
+    current_value = stats.get(stat_name, 0) if stats else 0
+
+    try:
+        supabase.table("creator_stats").update({
+            stat_name: current_value + 1,
+            "last_activity": datetime.now().isoformat()
+        }).eq("user_id", st.session_state.user.id).execute()
+    except Exception:
+        pass
 
 def creator_score_card():
     st.markdown(
@@ -1192,6 +1239,7 @@ Generate:
             )
             with st.spinner("Generating viral hooks..."):
                 st.session_state.hooks = call_ai(prompt, "You create viral livestream hooks for creators.", 0.95)
+                update_creator_stat("hooks_generated")
 
     if st.session_state.hooks:
         output_block("Hooks", st.session_state.hooks, "livecreator_ai_hooks")
@@ -1233,6 +1281,7 @@ Include:
             )
             with st.spinner("Writing captions..."):
                 st.session_state.captions = call_ai(prompt, "You write strong social media captions for creators.", 0.85)
+                update_creator_stat("captions_generated")
 
     if st.session_state.captions:
         output_block("Captions", st.session_state.captions, "livecreator_ai_captions")
@@ -1312,6 +1361,26 @@ if tool_key == "Debate Engine":
     if st.session_state.debate:
         output_block("Debate Pack", st.session_state.debate, "livecreator_ai_debate")
 
+if st.session_state.get("user"):
+    stats = get_creator_stats()
+
+    if stats:
+        st.markdown(
+            f"""
+<div class="glass-card">
+<h3>📊 Creator Dashboard</h3>
+<p class="small">Your LiveCreator AI activity</p>
+
+<div class="metric-grid">
+    <div class="metric-card"><b>🎥 Live Packs</b><br>{stats.get("live_packs_generated", 0)}</div>
+    <div class="metric-card"><b>🔥 Hooks</b><br>{stats.get("hooks_generated", 0)}</div>
+    <div class="metric-card"><b>✍️ Captions</b><br>{stats.get("captions_generated", 0)}</div>
+    <div class="metric-card"><b>🕒 Last Activity</b><br>{stats.get("last_activity", "New")}</div>
+</div>
+</div>
+""",
+            unsafe_allow_html=True,
+        )
 
 if tool_key == "Trend Radar":
     st.markdown(thtml('<div class="glass-card"><h3>📈 AI Trend Radar</h3><p class="small">Discover livestream ideas, viral angles, and trending discussions for creators.</p></div>'), unsafe_allow_html=True)
