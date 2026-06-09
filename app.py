@@ -60,6 +60,11 @@ if st.session_state.get("user"):
     else:
         st.info("🆓 Free Creator")
 
+if st.session_state.get("user"):
+    if is_premium_user():
+        st.success("💎 Premium Creator")
+    else:
+        st.info("🆓 Free Creator")
 # ============================================================
 # TRANSLATION SYSTEM — SAFE, NO MONKEY PATCHING
 # ============================================================
@@ -397,6 +402,24 @@ def is_premium_user():
         )
 
         return result.data.get("is_premium", False)
+
+    except Exception:
+        return False
+
+def is_premium_user():
+    if not supabase or not st.session_state.get("user"):
+        return False
+
+    try:
+        result = (
+            supabase.table("user_profiles")
+            .select("is_premium")
+            .eq("id", st.session_state.user.id)
+            .single()
+            .execute()
+        )
+
+        return bool(result.data.get("is_premium", False))
 
     except Exception:
         return False
