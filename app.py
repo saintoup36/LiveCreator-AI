@@ -79,6 +79,14 @@ UI_TRANSLATIONS = {
     "English": {},
 
     "French": {
+        "LiveCreator AI": "LiveCreator AI",
+        "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.": "Préparez des titres de live, des accroches, des plans, des légendes, des hashtags, des appels à l’action et des idées de contenu en quelques minutes.",
+        "Never go live unprepared again.": "Ne lancez plus jamais un live sans préparation.",
+        "⚡ Full live plans": "⚡ Plans de live complets",
+        "🔥 Viral hooks": "🔥 Accroches virales",
+        "🌍 Multilingual": "🌍 Multilingue",
+        "💎 Creator SaaS": "💎 SaaS pour créateurs",
+        "This language controls both the app interface and the AI-generated content.": "Cette langue contrôle à la fois l’interface de l’application et le contenu généré par l’IA.",
         "Language Settings": "Paramètres de langue",
         "App Language": "Langue de l’application",
         "Apply Language": "Appliquer la langue",
@@ -148,6 +156,14 @@ UI_TRANSLATIONS = {
     },
 
     "Haitian Creole": {
+        "LiveCreator AI": "LiveCreator AI",
+        "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.": "Prepare tit live, fraz pou atire moun, plan, caption, hashtag, CTA, ak ide kontni an kèk minit.",
+        "Never go live unprepared again.": "Pa janm antre live san preparasyon ankò.",
+        "⚡ Full live plans": "⚡ Plan live konplè",
+        "🔥 Viral hooks": "🔥 Fraz viral",
+        "🌍 Multilingual": "🌍 Plizyè lang",
+        "💎 Creator SaaS": "💎 SaaS pou kreyatè",
+        "This language controls both the app interface and the AI-generated content.": "Lang sa a kontwole ni aplikasyon an ni kontni AI a kreye.",
         "Language Settings": "Paramèt lang",
         "App Language": "Lang aplikasyon an",
         "Apply Language": "Aplike lang lan",
@@ -157,6 +173,7 @@ UI_TRANSLATIONS = {
         "Logout": "Dekonekte",
         "Email": "Imèl",
         "Password": "Modpas",
+        "Logged in as": "Konekte kòm",
         "Creator Studio": "Estidyo Kreyatè",
         "Choose what you want LiveCreator AI to build.": "Chwazi sa ou vle LiveCreator AI kreye.",
         "Choose AI tool": "Chwazi zouti AI a",
@@ -198,16 +215,16 @@ UI_TRANSLATIONS = {
         "Translate Content": "Tradui kontni an",
         "Premium Plan": "Plan Premium",
     },
-    
-    "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs,\nand content ideas in minutes.": "Prepare tit live, fraz pou atire moun, plan, caption, hashtag, CTA,\nak ide kontni an kèk minit.",
-    "Never go live unprepared again.": "Pa janm antre live san preparasyon ankò.",
-    "⚡ Full live plans": "⚡ Plan live konplè",
-    "🔥 Viral hooks": "🔥 Fraz viral",
-    "🌍 Multilingual": "🌍 Plizyè lang",
-    "💎 Creator SaaS": "💎 SaaS pou kreyatè",
-    "This language controls both the app interface and the AI-generated content.": "Lang sa a kontwole ni aplikasyon an ni kontni AI a kreye.",
 
     "Spanish": {
+        "LiveCreator AI": "LiveCreator AI",
+        "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.": "Prepara títulos de live, ganchos, esquemas, captions, hashtags, llamadas a la acción e ideas de contenido en minutos.",
+        "Never go live unprepared again.": "Nunca vuelvas a salir en vivo sin preparación.",
+        "⚡ Full live plans": "⚡ Planes completos de live",
+        "🔥 Viral hooks": "🔥 Ganchos virales",
+        "🌍 Multilingual": "🌍 Multilingüe",
+        "💎 Creator SaaS": "💎 SaaS para creadores",
+        "This language controls both the app interface and the AI-generated content.": "Este idioma controla tanto la interfaz de la app como el contenido generado por IA.",
         "Language Settings": "Configuración de idioma",
         "App Language": "Idioma de la app",
         "Apply Language": "Aplicar idioma",
@@ -217,6 +234,7 @@ UI_TRANSLATIONS = {
         "Logout": "Cerrar sesión",
         "Email": "Correo",
         "Password": "Contraseña",
+        "Logged in as": "Conectado como",
         "Creator Studio": "Estudio del Creador",
         "Choose what you want LiveCreator AI to build.": "Elige lo que quieres que LiveCreator AI cree.",
         "Choose AI tool": "Elige una herramienta IA",
@@ -258,15 +276,15 @@ UI_TRANSLATIONS = {
         "Premium Plan": "Plan Premium",
     },
 
-    "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs,\nand content ideas in minutes.": "Prepare tit live, fraz pou atire moun, plan, caption, hashtag, CTA,\nak ide kontni an kèk minit.",
-"Never go live unprepared again.": "Pa janm antre live san preparasyon ankò.",
-"⚡ Full live plans": "⚡ Plan live konplè",
-"🔥 Viral hooks": "🔥 Fraz viral",
-"🌍 Multilingual": "🌍 Plizyè lang",
-"💎 Creator SaaS": "💎 SaaS pou kreyatè",
-"This language controls both the app interface and the AI-generated content.": "Lang sa a kontwole ni aplikasyon an ni kontni AI a kreye.",
-    
     "Portuguese": {
+        "LiveCreator AI": "LiveCreator AI",
+        "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.": "Prepare títulos de live, ganchos, roteiros, legendas, hashtags, chamadas para ação e ideias de conteúdo em minutos.",
+        "Never go live unprepared again.": "Nunca mais entre ao vivo despreparado.",
+        "⚡ Full live plans": "⚡ Planos completos de live",
+        "🔥 Viral hooks": "🔥 Ganchos virais",
+        "🌍 Multilingual": "🌍 Multilíngue",
+        "💎 Creator SaaS": "💎 SaaS para criadores",
+        "This language controls both the app interface and the AI-generated content.": "Este idioma controla tanto a interface do app quanto o conteúdo gerado pela IA.",
         "Language Settings": "Configurações de idioma",
         "App Language": "Idioma do app",
         "Apply Language": "Aplicar idioma",
@@ -279,16 +297,16 @@ UI_TRANSLATIONS = {
         "Go Live in 60 Seconds": "Entrar ao vivo em 60 segundos",
         "Premium Plan": "Plano Premium",
     },
-    
-    "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs,\nand content ideas in minutes.": "Prepare tit live, fraz pou atire moun, plan, caption, hashtag, CTA,\nak ide kontni an kèk minit.",
-    "Never go live unprepared again.": "Pa janm antre live san preparasyon ankò.",
-    "⚡ Full live plans": "⚡ Plan live konplè",
-    "🔥 Viral hooks": "🔥 Fraz viral",
-    "🌍 Multilingual": "🌍 Plizyè lang",
-    "💎 Creator SaaS": "💎 SaaS pou kreyatè",
-    "This language controls both the app interface and the AI-generated content.": "Lang sa a kontwole ni aplikasyon an ni kontni AI a kreye.",
 
     "Arabic": {
+        "LiveCreator AI": "LiveCreator AI",
+        "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.": "حضّر عناوين البث المباشر، والافتتاحيات الجذابة، والخطط، والتعليقات، والوسوم، ودعوات الإجراء، وأفكار المحتوى خلال دقائق.",
+        "Never go live unprepared again.": "لا تدخل البث المباشر غير مستعد مرة أخرى.",
+        "⚡ Full live plans": "⚡ خطط بث كاملة",
+        "🔥 Viral hooks": "🔥 افتتاحيات فيروسية",
+        "🌍 Multilingual": "🌍 متعدد اللغات",
+        "💎 Creator SaaS": "💎 منصة SaaS للمبدعين",
+        "This language controls both the app interface and the AI-generated content.": "تتحكم هذه اللغة في واجهة التطبيق والمحتوى الذي ينشئه الذكاء الاصطناعي.",
         "Language Settings": "إعدادات اللغة",
         "App Language": "لغة التطبيق",
         "Apply Language": "تطبيق اللغة",
@@ -301,16 +319,16 @@ UI_TRANSLATIONS = {
         "Go Live in 60 Seconds": "جهّز بثك في 60 ثانية",
         "Premium Plan": "خطة بريميوم",
     },
-    
-    "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs,\nand content ideas in minutes.": "Prepare tit live, fraz pou atire moun, plan, caption, hashtag, CTA,\nak ide kontni an kèk minit.",
-    "Never go live unprepared again.": "Pa janm antre live san preparasyon ankò.",
-    "⚡ Full live plans": "⚡ Plan live konplè",
-    "🔥 Viral hooks": "🔥 Fraz viral",
-    "🌍 Multilingual": "🌍 Plizyè lang",
-    "💎 Creator SaaS": "💎 SaaS pou kreyatè",
-    "This language controls both the app interface and the AI-generated content.": "Lang sa a kontwole ni aplikasyon an ni kontni AI a kreye.",
 
     "Mandarin Chinese": {
+        "LiveCreator AI": "LiveCreator AI",
+        "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.": "在几分钟内准备直播标题、开场钩子、提纲、文案、话题标签、行动号召和内容创意。",
+        "Never go live unprepared again.": "再也不要毫无准备地开播。",
+        "⚡ Full live plans": "⚡ 完整直播方案",
+        "🔥 Viral hooks": "🔥 爆款开场钩子",
+        "🌍 Multilingual": "🌍 多语言",
+        "💎 Creator SaaS": "💎 创作者 SaaS",
+        "This language controls both the app interface and the AI-generated content.": "此语言会同时控制应用界面和 AI 生成内容。",
         "Language Settings": "语言设置",
         "App Language": "应用语言",
         "Apply Language": "应用语言",
@@ -323,16 +341,16 @@ UI_TRANSLATIONS = {
         "Go Live in 60 Seconds": "60 秒快速开播方案",
         "Premium Plan": "高级计划",
     },
-    
-    "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs,\nand content ideas in minutes.": "Prepare tit live, fraz pou atire moun, plan, caption, hashtag, CTA,\nak ide kontni an kèk minit.",
-    "Never go live unprepared again.": "Pa janm antre live san preparasyon ankò.",
-    "⚡ Full live plans": "⚡ Plan live konplè",
-    "🔥 Viral hooks": "🔥 Fraz viral",
-    "🌍 Multilingual": "🌍 Plizyè lang",
-    "💎 Creator SaaS": "💎 SaaS pou kreyatè",
-     "This language controls both the app interface and the AI-generated content.": "Lang sa a kontwole ni aplikasyon an ni kontni AI a kreye.",
 
     "Hindi": {
+        "LiveCreator AI": "LiveCreator AI",
+        "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.": "कुछ ही मिनटों में लाइवस्ट्रीम शीर्षक, हुक, रूपरेखा, कैप्शन, हैशटैग, कॉल-टू-एक्शन और कंटेंट आइडिया तैयार करें।",
+        "Never go live unprepared again.": "अब कभी भी बिना तैयारी के लाइव न जाएँ।",
+        "⚡ Full live plans": "⚡ पूरे लाइव प्लान",
+        "🔥 Viral hooks": "🔥 वायरल हुक",
+        "🌍 Multilingual": "🌍 बहुभाषी",
+        "💎 Creator SaaS": "💎 क्रिएटर SaaS",
+        "This language controls both the app interface and the AI-generated content.": "यह भाषा ऐप इंटरफ़ेस और AI द्वारा बनाए गए कंटेंट दोनों को नियंत्रित करती है।",
         "Language Settings": "भाषा सेटिंग्स",
         "App Language": "ऐप भाषा",
         "Apply Language": "भाषा लागू करें",
@@ -345,14 +363,6 @@ UI_TRANSLATIONS = {
         "Go Live in 60 Seconds": "60 सेकंड में लाइव तैयारी",
         "Premium Plan": "प्रीमियम योजना",
     },
-    
-    "Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs,\nand content ideas in minutes.": "Prepare tit live, fraz pou atire moun, plan, caption, hashtag, CTA,\nak ide kontni an kèk minit.",
-    "Never go live unprepared again.": "Pa janm antre live san preparasyon ankò.",
-    "⚡ Full live plans": "⚡ Plan live konplè",
-    "🔥 Viral hooks": "🔥 Fraz viral",
-    "🌍 Multilingual": "🌍 Plizyè lang",
-    "💎 Creator SaaS": "💎 SaaS pou kreyatè",
-    "This language controls both the app interface and the AI-generated content.": "Lang sa a kontwole ni aplikasyon an ni kontni AI a kreye.",
 }
 
 TRANSLATIONS = UI_TRANSLATIONS
@@ -787,19 +797,27 @@ Make it practical, modern, social-media optimized, creator-friendly, and ready t
 """
 
 
-def save_live_pack_to_supabase(topic: str, content: str) -> bool:
-    if not supabase or not st.session_state.get("user"):
-        return False
+def save_live_pack_to_supabase(topic: str, content: str):
+    """Save one generated live pack for the logged-in user.
+
+    Returns:
+        tuple[bool, str | None]: (success, error_message)
+    """
+    if not supabase:
+        return False, "Supabase is not connected."
+
+    if not st.session_state.get("user"):
+        return False, "Please log in to save packs."
+
     try:
         supabase.table("live_packs").insert({
             "user_id": st.session_state.user.id,
             "topic": topic,
             "content": content,
         }).execute()
-        return True
+        return True, None
     except Exception as e:
-        st.warning(f"Could not save to Supabase: {e}")
-        return False
+        return False, str(e)
 
 
 def load_live_packs_from_supabase():
@@ -944,22 +962,21 @@ def creator_score_card():
 # ============================================================
 
 st.markdown(
-    thtml("""
+    f"""
 <div class="hero">
-    <h1 class="hero-title">LiveCreator AI</h1>
+    <h1 class="hero-title">{t("LiveCreator AI")}</h1>
     <p class="hero-subtitle">
-        Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs,
-        and content ideas in minutes.
+        {t("Prepare livestream titles, hooks, outlines, captions, hashtags, CTAs, and content ideas in minutes.")}
     </p>
-    <div class="slogan">Never go live unprepared again.</div>
+    <div class="slogan">{t("Never go live unprepared again.")}</div>
     <div class="mini-grid">
-        <div class="mini-card">⚡ Full live plans</div>
-        <div class="mini-card">🔥 Viral hooks</div>
-        <div class="mini-card">🌍 Multilingual</div>
-        <div class="mini-card">💎 Creator SaaS</div>
+        <div class="mini-card">{t("⚡ Full live plans")}</div>
+        <div class="mini-card">{t("🔥 Viral hooks")}</div>
+        <div class="mini-card">{t("🌍 Multilingual")}</div>
+        <div class="mini-card">{t("💎 Creator SaaS")}</div>
     </div>
 </div>
-"""),
+""",
     unsafe_allow_html=True,
 )
 
@@ -969,7 +986,7 @@ st.markdown(
 # ============================================================
 
 with st.expander(f"🌍 {t('Language Settings')}", expanded=False):
-    st.caption("This language controls both the app interface and the AI-generated content.")
+    st.caption(t("This language controls both the app interface and the AI-generated content."))
     selected_language = st.selectbox(
         t("App Language"),
         LANGUAGES,
@@ -1153,8 +1170,6 @@ if tool_key == "Complete Live Pack":
                     temperature=0.85,
                 )
 
-            st.session_state.saved_packs.insert(0, {"topic": topic.strip(), "content": st.session_state.live_pack, "created_at": datetime.now().isoformat()})
-            save_live_pack_to_supabase(topic.strip(), st.session_state.live_pack)
 
     st.markdown("<div style='height:14px'></div>", unsafe_allow_html=True)
 
@@ -1195,12 +1210,30 @@ Include only:
                     temperature=0.85,
                 )
 
-            st.session_state.saved_packs.insert(0, {"topic": topic.strip(), "content": st.session_state.live_pack, "created_at": datetime.now().isoformat()})
-            save_live_pack_to_supabase(topic.strip(), st.session_state.live_pack)
 
     if st.session_state.live_pack:
         creator_score_card()
         output_block("Live Pack", st.session_state.live_pack, "livecreator_ai_pack")
+
+        if st.button("💾 Save This Pack", use_container_width=True, key="save_this_live_pack_btn"):
+            if not st.session_state.get("user"):
+                st.warning("Please log in to save packs.")
+            elif not supabase:
+                st.session_state.saved_packs.insert(0, {
+                    "topic": topic.strip() or "Untitled Live Pack",
+                    "content": st.session_state.live_pack,
+                    "created_at": datetime.now().isoformat(),
+                })
+                st.warning("Supabase is not connected. Pack saved locally for this session.")
+            else:
+                success, error = save_live_pack_to_supabase(
+                    topic.strip() or "Untitled Live Pack",
+                    st.session_state.live_pack,
+                )
+                if success:
+                    st.success("✅ Pack saved to your account.")
+                else:
+                    st.error(f"Save failed: {error}")
 
 
 # ============================================================
@@ -1239,7 +1272,8 @@ Generate:
             )
             with st.spinner("Generating viral hooks..."):
                 st.session_state.hooks = call_ai(prompt, "You create viral livestream hooks for creators.", 0.95)
-                update_creator_stat("hooks_generated")
+
+            update_creator_stat("live_packs_generated")
 
     if st.session_state.hooks:
         output_block("Hooks", st.session_state.hooks, "livecreator_ai_hooks")
@@ -1281,7 +1315,8 @@ Include:
             )
             with st.spinner("Writing captions..."):
                 st.session_state.captions = call_ai(prompt, "You write strong social media captions for creators.", 0.85)
-                update_creator_stat("captions_generated")
+
+            update_creator_stat("captions_generated")
 
     if st.session_state.captions:
         output_block("Captions", st.session_state.captions, "livecreator_ai_captions")
@@ -1536,4 +1571,4 @@ Audience simulator
     st.button(f"💎 {t('Upgrade Coming Soon')}", use_container_width=True)
 
 
-st.markdown('<div class="footer">LiveCreator AI — Never go live unprepared again.</div>', unsafe_allow_html=True)
+st.markdown(f'<div class="footer">{t("LiveCreator AI")} — {t("Never go live unprepared again.")}</div>', unsafe_allow_html=True)
