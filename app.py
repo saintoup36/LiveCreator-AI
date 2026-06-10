@@ -3,6 +3,7 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlencode, urlsplit, urlunsplit, parse_qsl
 
 from dotenv import load_dotenv
 import streamlit as st
@@ -378,6 +379,50 @@ def thtml(html: str) -> str:
 def current_language() -> str:
     return st.session_state.get("active_app_language", "English")
 
+
+def get_secret_value(name: str, default: str = "") -> str:
+    """Read a setting from .env first, then Streamlit secrets without crashing locally."""
+    value = os.getenv(name, "")
+    if value:
+        return value
+
+    try:
+        return st.secrets[name]
+    except Exception:
+        return default
+
+
+def build_stripe_checkout_url(base_url: str) -> str:
+    """Add the logged-in Supabase user ID and email to a Stripe Payment Link.
+
+    The Stripe webhook reads client_reference_id to upgrade the correct user.
+    """
+    if not base_url:
+        return ""
+
+    params = {}
+    user = st.session_state.get("user")
+    if user:
+        user_id = getattr(user, "id", "")
+        user_email = getattr(user, "email", "")
+        if user_id:
+            params["client_reference_id"] = user_id
+        if user_email:
+            params["prefilled_email"] = user_email
+
+    if not params:
+        return base_url
+
+    parts = urlsplit(base_url)
+    query = dict(parse_qsl(parts.query, keep_blank_values=True))
+    query.update(params)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
+
+
+def get_stripe_monthly_link() -> str:
+    return build_stripe_checkout_url(get_secret_value("STRIPE_MONTHLY_LINK", ""))
+
+
 def is_premium_user():
     if not supabase or not st.session_state.get("user"):
         return False
@@ -395,6 +440,8 @@ def is_premium_user():
 
     except Exception:
         return False
+
+
 
 # ============================================================
 # STATE
@@ -1040,28 +1087,36 @@ with st.expander(f"🔐 {t('Account Access')}", expanded=False):
                         try:
                             result = supabase.auth.sign_in_with_password({"email": email.strip(), "password": password})
                             st.session_state.user = result.user
+
+                            try:
+                                existing = (
+                                    supabase.table("user_profiles")
+                                    .select("*")
+                                    .eq("id", result.user.id)
+                                    .execute()
+                                )
+
+                                if not existing.data:
+                                    supabase.table("user_profiles").insert({
+                                        "id": result.user.id,
+                                        "email": result.user.email,
+                                        "is_premium": False
+                                    }).execute()
+                            except Exception as e:
+                                st.warning(f"Profile creation failed: {e}")
+
                             st.success("Logged in.")
                             st.rerun()
                         except Exception as e:
                             st.error(f"Login failed: {e}")
-                        try:
-                            existing = (
-                                supabase.table("user_profiles")
-                                .select("*")
-                                .eq("id", result.user.id)
-                                .execute()
-                            )
-                            
-                            if not existing.data:
-                                supabase.table("user_profiles").insert({
-                                    "id": result.user.id,
-                                    "email": result.user.email,
-                                    "is_premium": False
-                                }).execute()
 
-                        except Exception as e:
-                            st.warning(f"Profile creation failed: {e}")
-
+        stripe_monthly_link = get_stripe_monthly_link()
+        if st.session_state.get("user") and not is_premium_user():
+            if stripe_monthly_link:
+                st.link_button("💎 Upgrade to Premium", stripe_monthly_link, use_container_width=True)
+            else:
+                st.warning("Stripe payment link is missing.")
+    
 
 # ============================================================
 # CREATOR STUDIO
@@ -1275,7 +1330,7 @@ Generate:
             with st.spinner("Generating viral hooks..."):
                 st.session_state.hooks = call_ai(prompt, "You create viral livestream hooks for creators.", 0.95)
 
-            update_creator_stat("live_packs_generated")
+            update_creator_stat("hooks_generated")
 
     if st.session_state.hooks:
         output_block("Hooks", st.session_state.hooks, "livecreator_ai_hooks")
@@ -1570,7 +1625,14 @@ Audience simulator
         unsafe_allow_html=True,
     )
 
-    st.button(f"💎 {t('Upgrade Coming Soon')}", use_container_width=True)
+    stripe_monthly_link = get_stripe_monthly_link()
+
+    if is_premium_user():
+        st.success("💎 You are already a Premium Creator.")
+    elif stripe_monthly_link:
+        st.link_button("💎 Upgrade to Premium", stripe_monthly_link, use_container_width=True)
+    else:
+        st.warning("Stripe payment link is missing.")
 
 
 st.markdown(f'<div class="footer">{t("LiveCreator AI")} — {t("Never go live unprepared again.")}</div>', unsafe_allow_html=True)
