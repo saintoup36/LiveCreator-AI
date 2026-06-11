@@ -1603,7 +1603,7 @@ if tool_key == "Premium":
 
 <div class="glass-card">
 <h3>Premium Creator</h3>
-<h1>$9.99–$19.99/mo</h1>
+<h1>$15/mo</h1>
 <p class="small">
 Unlimited livestream packs<br>
 Viral hooks engine<br>
